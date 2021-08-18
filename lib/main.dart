@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tmc_flutter_app/screens/login/login_screen.dart';
 import 'constants.dart';
-import 'screens/welcome/welcome_screen.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
