@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tmc_flutter_app/screens/login/login_screen.dart';
+import 'package:tmc_flutter_app/screens/login/loginScreen.dart';
 import 'constants.dart';
 
 void main() {
