@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
           headline6:
               TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
         ),
-        buttonColor: kPrimaryColor,
+        buttonTheme:
+            Theme.of(context).buttonTheme.copyWith(buttonColor: kPrimaryColor),
       ),
       home: WelcomeScreen(),
     );
@@ -48,8 +49,10 @@ class WelcomeScreen extends StatelessWidget {
           ),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 RichText(
+                  textAlign: TextAlign.center,
                   text: TextSpan(
                     children: [
                       TextSpan(
@@ -59,6 +62,30 @@ class WelcomeScreen extends StatelessWidget {
                           text: "For Muslims and Non-Muslims",
                           style: Theme.of(context).textTheme.headline6),
                     ],
+                  ),
+                ),
+                FittedBox(
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 15.0),
+                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: kPrimaryColor,
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "Start Today",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
