@@ -75,7 +75,7 @@ class WelcomeScreen extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Text(
-                          "Start Today",
+                          "ELEVATE YOUR LIFESTYLE",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
