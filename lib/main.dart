@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/images/bg_image.jpeg"),
+                    image: AssetImage("assets/images/tmc_icon_black_bg.jpg"),
                     fit: BoxFit.cover),
               ),
             ),
@@ -56,10 +56,10 @@ class WelcomeScreen extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                          text: "The Muslim Companion\n",
+                          text: "Elevate your Lifestyle!\n",
                           style: Theme.of(context).textTheme.headline5),
                       TextSpan(
-                          text: "For Muslims and Non-Muslims",
+                          text: "Muslims and Non-Muslims",
                           style: Theme.of(context).textTheme.headline6),
                     ],
                   ),
@@ -75,7 +75,7 @@ class WelcomeScreen extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Text(
-                          "ELEVATE YOUR LIFESTYLE",
+                          "Start Now",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
