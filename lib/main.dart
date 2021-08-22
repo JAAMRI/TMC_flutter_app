@@ -15,8 +15,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Auth screen',
       theme: ThemeData(
-          primaryColor: kPrimaryColor,
-          scaffoldBackgroundColor: kBackgroundColor),
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: kBackgroundColor,
+        textTheme: TextTheme(
+          headline5:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          headline6:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+        ),
+        buttonColor: kPrimaryColor,
+      ),
       home: WelcomeScreen(),
     );
   }
@@ -29,16 +37,33 @@ class WelcomeScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(
-            flex: 6,
+            flex: 3,
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/bg_image.jpeg"),
-                ),
+                    image: AssetImage("assets/images/bg_image.jpeg"),
+                    fit: BoxFit.cover),
               ),
             ),
           ),
-          Expanded(child: Column())
+          Expanded(
+            child: Column(
+              children: <Widget>[
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                          text: "The Muslim Companion\n",
+                          style: Theme.of(context).textTheme.headline5),
+                      TextSpan(
+                          text: "For Muslims and Non-Muslims",
+                          style: Theme.of(context).textTheme.headline6),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
